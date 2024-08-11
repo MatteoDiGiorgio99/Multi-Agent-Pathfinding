@@ -1,0 +1,15 @@
+reset;
+option solver gurobi;
+option presolve 0;
+model Minimum_MAPF.mod;
+data Minimum_MAPF.dat;
+solve;
+
+
+for{istante in 1..Limite_Percorso}{
+	for{agente in 1..Agenti}{
+		printf {(i,j) in ARCHI_BIDIREZIONALI: ArcoUtilizzato[agente, istante, i, j] = 1} 
+		'Istante temporale %d\n Agente: %d -> da %s a %s.\n', istante, agente, i, j;
+	}
+	printf '\n';
+}

@@ -1,0 +1,21 @@
+### SET ###
+set NODI := A, B, C, D, E, F;
+
+set ARCHI := (A,B)(B,D)(B,E)(C,D)(C,F)(D,E)
+;
+
+### PARAMETRI ###
+param Agenti := 3;
+
+param Origine := 
+1 A 
+2 D
+3 C;
+param Destinazione := 
+1 D 
+2 B
+3 B
+;
+
+
+param Limite_Percorso := 5;
